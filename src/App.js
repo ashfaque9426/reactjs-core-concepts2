@@ -3,31 +3,34 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  // const products = [
-  //   {name: "laptop", price: 53000},
-  //   {name: "iphone", price: 75000},
-  //   {name: "watch", price: 33000},
-  //   {name: "tablet", price: 9000},
-  //   {name: "sunglass", price: 5900},
-  // ];
+  const products = [
+    {name: "laptop", price: 53000},
+    {name: "iphone", price: 75000},
+    {name: "watch", price: 33000},
+    {name: "tablet", price: 9000},
+    {name: "sunglass", price: 5900},
+  ];
   return (
-    <section className="App grid">
-      {/* {
+    <section className="App">
+      <section className="grid">
+        {
         products.map(product => <Product name={product.name} price={product.price}></Product>)
-      } */}
+      }
+      </section>
+      
       <Counter></Counter>
     </section>
   );
 }
 
-// function Product(props) {
-//   return (
-//     <article className='product'>
-//       <h3>Name: {props.name}</h3>
-//       <p>Price: {props.price}</p>
-//     </article>
-//   );
-// }
+function Product(props) {
+  return (
+    <article className='product'>
+      <h3>Name: {props.name}</h3>
+      <p>Price: {props.price}</p>
+    </article>
+  );
+}
 
 function Counter() {
   let [count, setCount] = useState(0);
